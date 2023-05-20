@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9191166323684975773}
   - component: {fileID: 3912223063805242786}
-  - component: {fileID: -6713320079686969187}
+  - component: {fileID: 1901579473461667414}
   m_Layer: 0
   m_Name: DownPipeLine
   m_TagString: Untagged
@@ -74,18 +74,18 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 306699714, guid: e12b09073b3ec674abfe785587c0939b, type: 3}
+  m_Sprite: {fileID: 1965159202, guid: e12b09073b3ec674abfe785587c0939b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.8125, y: 3.78125}
+  m_Size: {x: 0.26, y: 1.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &-6713320079686969187
+--- !u!61 &1901579473461667414
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,12 +102,12 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.8125, y: 3.78125}
-    newSize: {x: 0.8125, y: 3.78125}
+    oldSize: {x: 0.26, y: 1.22}
+    newSize: {x: 0.26, y: 1.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8125, y: 3.78125}
+  m_Size: {x: 0.26, y: 1.22}
   m_EdgeRadius: 0

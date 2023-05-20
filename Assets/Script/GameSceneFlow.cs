@@ -27,6 +27,7 @@ public class GameSceneFlow : MonoBehaviour
     {
         currState = State.Ready;
         OnReadyed?.Invoke();
+        GameManager.Data.CurrScore = 0;
     }
 
     public void Play()
