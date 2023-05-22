@@ -56,14 +56,14 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\PlayerController.cs" />
-    <Compile Include="Assets\Config\GameSetting.cs" />
-    <Compile Include="Assets\Manager\GameManager.cs" />
-    <Compile Include="Assets\Script\PipeLine.cs" />
-    <Compile Include="Assets\Script\PipeLineSpawner.cs" />
-    <Compile Include="Assets\Script\Scroller.cs" />
     <Compile Include="Assets\Script\GameSceneFlow.cs" />
     <Compile Include="Assets\Script\ChangeScene.cs" />
+    <Compile Include="Assets\Script\Scroller.cs" />
+    <Compile Include="Assets\Script\PlayerController.cs" />
+    <Compile Include="Assets\Manager\GameManager.cs" />
+    <Compile Include="Assets\Config\GameSetting.cs" />
+    <Compile Include="Assets\Script\PipeLineSpawner.cs" />
+    <Compile Include="Assets\Script\PipeLine.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
