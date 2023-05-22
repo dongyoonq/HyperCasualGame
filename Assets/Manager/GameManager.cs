@@ -5,7 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
+    private static DataManager data;
+
     public static GameManager Instance { get { return instance; } }
+    public static DataManager Data { get { return data; } } 
 
     public void Awake()
     {
@@ -17,6 +20,7 @@ public class GameManager : MonoBehaviour
 
         instance = this;
         DontDestroyOnLoad(this);
+        InitManager();
     }
 
     public void OnDestroy()
@@ -25,5 +29,12 @@ public class GameManager : MonoBehaviour
         {
             instance = null;
         }
+    }
+
+    private void InitManager()
+    {
+        GameObject dataObj = new GameObject() { name = "DataManager" };
+        dataObj.transform.SetParent(transform);
+        data = gameObject.AddComponent<DataManager>();
     }
 }

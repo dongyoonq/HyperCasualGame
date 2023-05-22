@@ -9,13 +9,23 @@ using UnityEngine.UIElements;
 public class PlayerController : MonoBehaviour
 {
     public UnityEvent OnDied;
+    public UnityEvent OnScored;
+    public UnityEvent OnJumped;
+
     private Rigidbody2D playerRb;
+    private Vector2 StartPos;
 
     public float jumpPower;
 
     private void Awake()
     {
+        StartPos = transform.position;
         playerRb = GetComponent<Rigidbody2D>();
+    }
+
+    public void SetPlayerPos()
+    {
+        transform.position = StartPos;
     }
 
     // Update is called once per frame
@@ -32,6 +42,7 @@ public class PlayerController : MonoBehaviour
     private void Jump()
     {
         playerRb.velocity = Vector2.up * jumpPower;
+        OnJumped?.Invoke();
     }
 
     private void Rotate()
@@ -42,5 +53,18 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         OnDied?.Invoke();
+        StartCoroutine(activeDisable());
+    }
+
+    IEnumerator activeDisable()
+    {
+        yield return new WaitForSeconds(1.5f);
+        gameObject.SetActive(false);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        GameManager.Data.CurrScore++;
+        OnScored?.Invoke();
     }
 }

@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class GameSetting : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    private static void Init()
     {
-        
+        InitValue();
+        InitManager();
     }
 
-    // Update is called once per frame
-    void Update()
+    private static void InitValue()
     {
-        
+        Physics2D.gravity = new Vector2(0, -25f);
+    }
+
+    private static void InitManager()
+    {
+        if (GameManager.Instance == null)
+        {
+            GameObject gameObject = new GameObject() { name = "GameManager" };
+            gameObject.AddComponent<GameManager>();
+        }
     }
 }
